@@ -1,0 +1,3 @@
+import {request} from './api';
+export const wishlistService={list:()=>request('/customers/me/wishlist'),add:(productId)=>request(`/customers/me/wishlist/${encodeURIComponent(productId)}`,{method:'PUT'}),remove:(productId)=>request(`/customers/me/wishlist/${encodeURIComponent(productId)}`,{method:'DELETE'})};
+export const cartService={get:()=>request('/carts/current'),add:(variantId,quantity=1)=>request('/carts/current/items',{method:'POST',body:{variantId,quantity}}),update:(lineId,quantity)=>request(`/carts/current/items/${encodeURIComponent(lineId)}`,{method:'PATCH',body:{quantity}}),remove:(lineId)=>request(`/carts/current/items/${encodeURIComponent(lineId)}`,{method:'DELETE'})};

@@ -1,0 +1,1 @@
+export const brand={name:'MAISON ÉLAN',storeId:import.meta.env.VITE_STORE_ID||'maison-elan',tagline:'The art of timelessness',philosophy:'Elegance is not created to follow time. It is created to outlast it.',currency:'EUR',locale:'en-GB'};
